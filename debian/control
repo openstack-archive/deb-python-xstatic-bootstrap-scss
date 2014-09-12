@@ -2,11 +2,13 @@ Source: python-xstatic-bootstrap-scss
 Section: python
 Priority: optional
 Maintainer: PKG OpenStack <openstack-devel@lists.alioth.debian.org>
-Uploaders: Julien Danjou <acid@debian.org>,
-           Thomas Goirand <zigo@debian.org>,
-           Mehdi Abaakouk <sileht@sileht.net>,
-           Gonéri Le Bouder <goneri@debian.org>
-Build-Depends: debhelper (>= 9), python-setuptools, python-all (>= 2.6.6-3~), python3-setuptools, python3-all
+Uploaders: Thomas Goirand <zigo@debian.org>
+Build-Depends: debhelper (>= 9),
+               python-all (>= 2.6.6-3~),
+               python-setuptools,
+               python3-all,
+               python3-setuptools
+Build-Conflicts: python-xstatic, python3-xstatic
 Standards-Version: 3.9.5
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=openstack/python-xstatic-bootstrap-scss.git
 Vcs-Git: git://anonscm.debian.org/openstack/python-xstatic-bootstrap-scss.git
@@ -15,7 +17,7 @@ Homepage: https://github.com/stackforge/xstatic-bootstrap-scss
 Package: python-xstatic-bootstrap-scss
 Architecture: all
 Pre-Depends: dpkg (>= 1.15.6~)
-Depends: ${python:Depends}, ${misc:Depends}
+Depends: ${misc:Depends}, ${python:Depends}
 Description: Bootstrap-SCSS XStatic support - Python 2.x
  XStatic is a Python web development tool for handling required static data
  files from external projects, such as CSS, images, and JavaScript. It provides
@@ -28,7 +30,7 @@ Description: Bootstrap-SCSS XStatic support - Python 2.x
 Package: python3-xstatic-bootstrap-scss
 Architecture: all
 Pre-Depends: dpkg (>= 1.15.6~)
-Depends: ${python3:Depends}, ${misc:Depends}
+Depends: ${misc:Depends}, ${python3:Depends}
 Description: Bootstrap-SCSS 3.2.0 (XStatic packaging standard) - Python 3.x
  XStatic is a Python web development tool for handling required static data
  files from external projects, such as CSS, images, and JavaScript. It provides
